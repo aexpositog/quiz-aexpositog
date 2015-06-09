@@ -12,7 +12,7 @@ exports.answer = function(req, res) {
 	}
 };
 
-//  GET  /author
+ //  GET  /author
 
 exports.author = function(req, res) {
 	res.render('author', {});
