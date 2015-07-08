@@ -11,7 +11,7 @@
 8 verbose unsafe-perm in lifecycle true
 9 info quiz@0.0.0 Failed to exec start script
 10 verbose stack Error: quiz@0.0.0 start: `node ./bin/www`
-10 verbose stack Exit status 1
+10 verbose stack Exit status 3221225786
 10 verbose stack     at EventEmitter.<anonymous> (H:\Archivos de Programa\node.js\node_modules\npm\lib\utils\lifecycle.js:213:16)
 10 verbose stack     at EventEmitter.emit (events.js:110:17)
 10 verbose stack     at ChildProcess.<anonymous> (H:\Archivos de Programa\node.js\node_modules\npm\lib\utils\spawn.js:24:14)
@@ -26,7 +26,7 @@
 16 error npm  v2.9.1
 17 error code ELIFECYCLE
 18 error quiz@0.0.0 start: `node ./bin/www`
-18 error Exit status 1
+18 error Exit status 3221225786
 19 error Failed at the quiz@0.0.0 start script 'node ./bin/www'.
 19 error This is most likely a problem with the quiz package,
 19 error not with npm itself.
