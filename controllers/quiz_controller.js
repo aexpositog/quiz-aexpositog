@@ -14,9 +14,21 @@ var models = require('../models/models.js');
 
 // GET /quizes
 exports.index = function(req, res) {
-    models.Quiz.findAll().then(function(quizes) {
-        res.render('quizes/index', {quizes: quizes});
-    }).catch(function(error){ next(error);})
+    var filtro = req.query.search;
+    var condicion = ('%' + filtro + '%').replace(/ /g,'%');
+    if (req.query.search){
+            models.Quiz.findAll({
+                where:['pregunta like ?', condicion], 
+                order: 'pregunta ASC'
+            }).then(function(quizes) {
+                    res.render('quizes/index.ejs', {quizes: quizes});
+                }).catch(function(error){ next(error);});
+    }else{
+        models.Quiz.findAll().then(
+            function(quizes){
+                res.render('quizes/index.ejs' , { quizes: quizes});
+            }).catch(function(error){next(error);})
+    }
 };
 
 // GET  /quizes/:id
@@ -33,9 +45,7 @@ exports.answer = function(req, res) {
         res.render('quizes/answer', {quiz: req.quiz, respuesta: resultado});    
 };
 
-
- //  GET  /author
-
+//  GET  /author
 exports.author = function(req, res) {
 	res.render('author', {});
 };
