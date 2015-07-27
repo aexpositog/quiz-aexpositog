@@ -5,10 +5,11 @@ body                 { font: 16px Georgia, serif; }
 #page-wrap > .main   { border: 1px solid #999; padding: 1%; 
 	                   margin-bottom: 1px; color: black;}
 
+table                {margin: auto;}
 section > div        { padding: 20px; }
 th 					 {color:red;}
 header, nav, section { background: #eee; text-align: center;}
 footer               { background: #eee; text-align: center;}
 nav span             { margin: 0px 10px 0px 0px;}
-
+nav a:hover, table a:hover, footer a:hover        { background: #5e3020; color: rgb(251,194,141);}
 #ErrorMsgs { color: #f61; font-size: smaller}
