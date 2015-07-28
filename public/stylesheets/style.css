@@ -12,4 +12,6 @@ header, nav, section { background: #eee; text-align: center;}
 footer               { background: #eee; text-align: center;}
 nav span             { margin: 0px 10px 0px 0px;}
 nav a:hover, table a:hover, footer a:hover        { background: #5e3020; color: rgb(251,194,141);}
+
+.right				 {float: right;}
 #ErrorMsgs { color: #f61; font-size: smaller}
