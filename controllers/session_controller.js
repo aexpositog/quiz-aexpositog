@@ -19,6 +19,9 @@ exports.create = function(req, res) {
 	var login		= req.body.login;
 	var password	= req.body.password;
 
+	// variable de sesion donde se guarda la hora de la ultima actividad
+	req.session.horaUltimoAcceso = (new Date()).getTime();
+
 	var userController = require('./user_controller');
 	userController.autenticar(login, password, function(error, user){
 		if(error){  // si hay error retornamos mensajes de error de sesión
